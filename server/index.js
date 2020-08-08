@@ -3,6 +3,9 @@ import express from "express";
 import logger from "morgan";
 import cors from "cors";
 
+// mongo connection
+import "./config/mongo.js";
+
 // routes
 
 import indexRouter from "./routes/index.js";
@@ -12,9 +15,9 @@ import deleteRouter from "./routes/delete.js";
 
 // middlewares
 
-import { decode } from '.middlewares/jwt.js';
+import { decode } from './middlewares/jwt.js'
 
-const app = express ();
+const app = express();
 
 // get port from environment and store in Express
 
